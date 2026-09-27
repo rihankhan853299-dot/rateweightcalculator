@@ -1,0 +1,198 @@
+/* ================================
+   1. Basic Reset
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   2. Body
+================================ */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+
+/* ================================
+   3. Input Fields
+================================ */
+
+#frstinput,
+#secinput {
+    width: min(100%, 400px);
+
+    padding: 15px 16px;
+    margin-bottom: 14px;
+
+    border: 2px solid #d1d5db;
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+
+/* Input focus */
+
+#frstinput:focus,
+#secinput:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* ================================
+   4. Find Button
+================================ */
+
+#find {
+    width: min(100%, 400px);
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+/* Button hover */
+
+#find:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* Button click */
+
+#find:active {
+    transform: translateY(0);
+}
+
+
+/* ================================
+   5. Result
+================================ */
+
+#result {
+    width: min(100%, 400px);
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    border: 2px solid #e5e7eb;
+
+    text-align: center;
+
+    font-size: clamp(24px, 5vw, 36px);
+
+    color: #111827;
+
+    min-height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ================================
+   6. Mobile Responsive
+================================ */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 16px;
+    }
+
+    #frstinput,
+    #secinput,
+    #find,
+    #result {
+        width: 100%;
+    }
+
+    #frstinput,
+    #secinput {
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    #find {
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    #result {
+        margin-top: 20px;
+        padding: 18px;
+    }
+}
+
+
+/* ================================
+   7. Very Small Screens
+================================ */
+
+@media (max-width: 350px) {
+
+    body {
+        padding: 12px;
+    }
+
+    #frstinput,
+    #secinput {
+        padding: 13px;
+    }
+
+    #find {
+        padding: 13px;
+    }
+
+    #result {
+        padding: 15px;
+        font-size: 24px;
+    }
+}

@@ -1,6 +1,6 @@
-/* ================================
+/* =================================
    1. Basic Reset
-================================ */
+================================= */
 
 * {
     margin: 0;
@@ -9,9 +9,9 @@
 }
 
 
-/* ================================
+/* =================================
    2. Body
-================================ */
+================================= */
 
 body {
     min-height: 100vh;
@@ -30,9 +30,9 @@ body {
 }
 
 
-/* ================================
+/* =================================
    3. Input Fields
-================================ */
+================================= */
 
 #frstinput,
 #secinput {
@@ -54,7 +54,7 @@ body {
 }
 
 
-/* Input focus */
+/* Input Focus */
 
 #frstinput:focus,
 #secinput:focus {
@@ -64,11 +64,17 @@ body {
 }
 
 
-/* ================================
-   4. Find Button
-================================ */
+/* =================================
+   4. Both Buttons
+================================= */
 
-#find {
+/*
+   #find aur #find2 dono ko
+   same styling milegi.
+*/
+
+#find,
+#find2 {
     width: min(100%, 400px);
 
     padding: 15px;
@@ -76,7 +82,6 @@ body {
     border: none;
     border-radius: 10px;
 
-    background: #2563eb;
     color: white;
 
     font-size: 17px;
@@ -88,7 +93,18 @@ body {
 }
 
 
-/* Button hover */
+/* =================================
+   5. First Button
+================================= */
+
+#find {
+    background: #2563eb;
+
+    margin-bottom: 12px;
+}
+
+
+/* First Button Hover */
 
 #find:hover {
     background: #1d4ed8;
@@ -97,21 +113,48 @@ body {
 }
 
 
-/* Button click */
+/* First Button Click */
 
 #find:active {
     transform: translateY(0);
 }
 
 
-/* ================================
-   5. Result
-================================ */
+/* =================================
+   6. Second Button
+================================= */
+
+#find2 {
+    background: #0f766e;
+
+    margin-bottom: 5px;
+}
+
+
+/* Second Button Hover */
+
+#find2:hover {
+    background: #115e59;
+
+    transform: translateY(-1px);
+}
+
+
+/* Second Button Click */
+
+#find2:active {
+    transform: translateY(0);
+}
+
+
+/* =================================
+   7. Result
+================================= */
 
 #result {
     width: min(100%, 400px);
 
-    margin-top: 25px;
+    margin-top: 20px;
 
     padding: 20px;
 
@@ -125,7 +168,7 @@ body {
 
     font-size: clamp(24px, 5vw, 36px);
 
-    color: #111827;
+    color: greenyellow;
 
     min-height: 70px;
 
@@ -137,9 +180,9 @@ body {
 }
 
 
-/* ================================
-   6. Mobile Responsive
-================================ */
+/* =================================
+   8. Mobile Responsive
+================================= */
 
 @media (max-width: 480px) {
 
@@ -147,34 +190,43 @@ body {
         padding: 16px;
     }
 
+
     #frstinput,
     #secinput,
     #find,
+    #find2,
     #result {
         width: 100%;
     }
 
+
     #frstinput,
     #secinput {
         padding: 14px;
+
         font-size: 16px;
     }
 
-    #find {
+
+    #find,
+    #find2 {
         padding: 14px;
+
         font-size: 16px;
     }
+
 
     #result {
         margin-top: 20px;
+
         padding: 18px;
     }
 }
 
 
-/* ================================
-   7. Very Small Screens
-================================ */
+/* =================================
+   9. Very Small Screens
+================================= */
 
 @media (max-width: 350px) {
 
@@ -182,17 +234,24 @@ body {
         padding: 12px;
     }
 
+
     #frstinput,
     #secinput {
         padding: 13px;
     }
 
-    #find {
+
+    #find,
+    #find2 {
         padding: 13px;
+
+        font-size: 15px;
     }
+
 
     #result {
         padding: 15px;
+
         font-size: 24px;
     }
 }

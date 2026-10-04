@@ -42,3 +42,7 @@ find2.addEventListener("click", () => {
 
 
 })
+
+if (frstinput.value === "" && secinput.value === "") {
+    result.textContent = "";
+}

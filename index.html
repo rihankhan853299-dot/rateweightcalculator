@@ -3,16 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rateweight calculator</title>
+
+    <meta name="theme-color" content="#050b18">
+
+    <title>Weight Calculator</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input type="text" id="frstinput" placeholder="  How much per kilogram? ₹ ">
-    <input type="text" id="secinput" placeholder="  How much money or kg do you have? ₹ ">
 
-    <button id="find">Find the value in weight</button>
-    <button id="find2">Find the value in rupees</button>
-    <h3 id="result"></h3>
+    <main class="calculator">
+
+        <!-- Calculator Header -->
+        <header class="app-header">
+            <div>
+                <h1>Weight Calculator</h1>
+                <p>Price aur weight ki calculation</p>
+            </div>
+
+            <div class="app-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <rect x="5" y="2" width="14" height="20"
+                        rx="2" stroke="currentColor" stroke-width="2"/>
+                    <path d="M8 6h8" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round"/>
+                    <rect x="8" y="10" width="3" height="3" rx="1"
+                        fill="currentColor"/>
+                    <rect x="13" y="10" width="3" height="3" rx="1"
+                        fill="currentColor"/>
+                    <rect x="8" y="15" width="3" height="3" rx="1"
+                        fill="currentColor"/>
+                    <rect x="13" y="15" width="3" height="3" rx="1"
+                        fill="currentColor"/>
+                </svg>
+            </div>
+        </header>
+
+        <!-- Input and Result Card -->
+        <section class="display-card">
+
+            <div class="input-group">
+                <label for="frstinput">Price per kilogram</label>
+
+                <div class="input-wrapper">
+                    <span>₹</span>
+                    <input
+                        type="text"
+                        id="frstinput"
+                        placeholder="80.00"
+                        autocomplete="off"
+                        aria-label="Price per kilogram in rupees"
+                    >
+                </div>
+            </div>
+
+            <div class="display-divider"></div>
+
+            <div class="input-group">
+                <label for="secinput" id="second-label">
+                    Amount / Weight
+                </label>
+
+                <div class="input-wrapper">
+                    <span id="second-prefix">₹</span>
+                    <input
+                        type="text"
+                        id="secinput"
+                        placeholder="Enter amount"
+                        autocomplete="off"
+                        aria-label="Amount in rupees or weight in kilograms"
+                    >
+                </div>
+            </div>
+
+            <!-- Large Result Field -->
+            <div class="result-card" aria-live="polite">
+                <div class="result-icon" aria-hidden="true">⚖</div>
+
+                <div class="result-content">
+                    <p id="result-label">Your result will appear here</p>
+                    <h2 id="result">—</h2>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Calculator Keypad -->
+        <section class="keypad" aria-label="Calculator keypad">
+
+            <button type="button" class="key" data-key="7">7</button>
+            <button type="button" class="key" data-key="8">8</button>
+            <button type="button" class="key" data-key="9">9</button>
+
+            <button type="button" class="key" data-key="4">4</button>
+            <button type="button" class="key" data-key="5">5</button>
+            <button type="button" class="key" data-key="6">6</button>
+
+            <button type="button" class="key" data-key="1">1</button>
+            <button type="button" class="key" data-key="2">2</button>
+            <button type="button" class="key" data-key="3">3</button>
+
+            <button type="button" class="key clear-key" data-key="clear">C</button>
+            <button type="button" class="key" data-key="0">0</button>
+            <button type="button" class="key" data-key="backspace"
+                aria-label="Delete last digit">⌫</button>
+
+            <button type="button" class="key decimal-key" data-key=".">.</button>
+        </section>
+
+        <!-- Calculation Buttons -->
+        <section class="action-buttons">
+
+            <button id="find" type="button">
+                Calculate In Weight
+            </button>
+
+            <button id="find2" type="button">
+                Calculate In Rupees
+            </button>
+
+        </section>
+
+        <p class="footer-text">Simple • Fast • Easy to use</p>
+
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
